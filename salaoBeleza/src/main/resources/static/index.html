@@ -13,14 +13,20 @@
 <body>
 
     <header>
-        <nav>
-            <a class="marca" href="#">Salão<span class="resto"> de Beleza</span></a>
-            <ul>
+        <nav aria-label="Navegação principal">
+            <a href="#" class="marca">Salão<span class="resto"> de Beleza</span></a>
+
+            <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-navegacao">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="menu-navegacao">
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#agendamento">Agendamento</a></li>
+                <li><a href="#agendamento">Agendar</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            <a class="cta" href="#agendamento">Agendar</a>
         </nav>
 
         <div class="hero">

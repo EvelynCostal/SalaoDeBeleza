@@ -1,5 +1,7 @@
 const form = document.getElementById('formAgendamento');
 const mensagem = document.getElementById('mensagem');
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('nav ul');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -36,3 +38,21 @@ form.addEventListener('submit', async (e) => {
         console.error('Erro:', error);
     }
 });
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        const aberto = navMenu.classList.toggle('aberto');
+        menuToggle.classList.toggle('ativo', aberto);
+        menuToggle.setAttribute('aria-expanded', aberto);
+        menuToggle.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    });
+
+    navMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('aberto');
+            menuToggle.classList.remove('ativo');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Abrir menu');
+        });
+    });
+};
