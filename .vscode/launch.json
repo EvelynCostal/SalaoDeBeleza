@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SalaoBelezaApplication<salaoBeleza>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.Cosmo.salaoBeleza.SalaoBelezaApplication",
+            "projectName": "salaoBeleza",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
