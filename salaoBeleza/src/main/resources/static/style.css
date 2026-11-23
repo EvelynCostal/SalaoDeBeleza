@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #fdf9fa 0%, #f6eff2 100%);
+    color: #2a1d22;
+    line-height: 1.65;
+    min-height: 100vh;
+}
+
+/* Cabeçalho sofisticado */
+header {
+    background: linear-gradient(145deg, #3b1322, #5e2237 55%, #7c314b);
+    color: #ffffff;
+    padding: 32px 24px 56px;
+    text-align: center;
+    border-bottom: 1px solid rgba(232, 198, 172, 0.28);
+    box-shadow: 0 14px 36px rgba(59, 19, 34, 0.18);
+}
+
+nav {
+    display: block;
+    width: 100%;
+    padding: 12px 24px;
+    margin-bottom: 32px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgba(236, 206, 184, 0.16);
+    border-bottom: 1px solid rgba(236, 206, 184, 0.22);
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    position: relative;
+    color: #f8e8ee;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 4px 0;
+    transition: color 0.25s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1.5px;
+    background: linear-gradient(90deg, #e7c2a8, #ffffff);
+    transition: width 0.28s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+header h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.95rem, 4.2vw, 2.7rem);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.22;
+    color: #fff9fb;
+    text-shadow: 0 2px 14px rgba(24, 6, 13, 0.35);
+}
+
+
+
+/* Container principal */
+main {
+    max-width: 740px;
+    margin: -20px auto 48px;
+    padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Cartões elegantes */
+section {
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid #ead8df;
+    border-radius: 18px;
+    padding: 28px 30px;
+    box-shadow: 0 10px 30px rgba(59, 19, 34, 0.05);
+}
+
+section h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #4b1b2c;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #efe1e6;
+}
+
+/* Lista de serviços */
+#servicos ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+}
+
+#servicos li {
+    background: linear-gradient(180deg, #fffcfd 0%, #fbf3f6 100%);
+    border: 1px solid #ead3dc;
+    border-left: 3px solid #7d2e4a;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 0.96rem;
+    font-weight: 500;
+    color: #3d1826;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+#servicos li:hover {
+    transform: translateY(-2px);
+    border-color: #d4a6b7;
+    border-left-color: #4b1b2c;
+    box-shadow: 0 6px 16px rgba(75, 27, 44, 0.07);
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #562738;
+    margin-bottom: -8px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #dec7d0;
+    border-radius: 10px;
+    font-size: 0.98rem;
+    font-family: inherit;
+    background-color: #fffdfd;
+    color: #2a1d22;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input:hover,
+select:hover {
+    border-color: #c8a6b4;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #7d2e4a;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(125, 46, 74, 0.12);
+}
+
+/* Botão principal */
+button[type="submit"] {
+    margin-top: 10px;
+    padding: 14px 22px;
+    background: linear-gradient(135deg, #4b1b2c, #7a2e49);
+    color: #fff9fb;
+    border: 1px solid rgba(231, 194, 168, 0.35);
+    border-radius: 10px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(75, 27, 44, 0.2);
+    transition: transform 0.15s ease, box-shadow 0.22s ease, filter 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(75, 27, 44, 0.26);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0) scale(0.99);
+}
+
+#mensagem {
+    margin-top: 14px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Contato */
+#contato p {
+    font-size: 0.96rem;
+    color: #4a353d;
+    margin-bottom: 8px;
+}
+
+#contato p:last-child {
+    margin-bottom: 0;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 560px) {
+    header {
+        padding: 24px 16px 46px;
+    }
+
+    nav {
+        padding: 8px 16px;
+        margin-bottom: 24px;
+    }
+
+    nav ul {
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 0.76rem;
+        letter-spacing: 0.1em;
+    }
+
+    section {
+        padding: 20px;
+        border-radius: 14px;
+    }
+}

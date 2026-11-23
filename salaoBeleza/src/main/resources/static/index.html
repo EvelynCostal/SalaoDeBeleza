@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <title>Salão de Beleza</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#agendamento">Agendamento</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <h1>Bem-vindo ao Salão de Beleza</h1>
+    </header>
+
+    <main>
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <ul>
+                <li>Corte de Cabelo</li>
+                <li>Coloração</li>
+                <li>Manicure e Pedicure</li>
+                <li>Tratamentos Capilares</li>
+            </ul>
+        </section>
+
+        <section id="agendamento">
+            <h2>Agendamento</h2>
+            <!-- ID adicionado para o JavaScript capturar -->
+            <form id="formAgendamento">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="servico">Serviço:</label>
+                <select id="servico" name="servico" required>
+                    <option value="Corte de Cabelo">Corte de Cabelo</option>
+                    <option value="Coloração">Coloração</option>
+                    <option value="Manicure e Pedicure">Manicure e Pedicure</option>
+                    <option value="Tratamentos Capilares">Tratamentos Capilares</option>
+                </select><br><br>
+
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required><br><br>
+
+                <label for="hora">Escolha um horário (08:00 às 18:00):</label>
+                <input type="time" id="hora" name="hora" min="08:00" max="18:00" step="1800" required><br><br>
+
+                <button type="submit">Agendar</button>
+            </form>
+            <p id="mensagem" style="margin-top: 15px; font-weight: bold;"></p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Email: contato@salao.com</p>
+            <p>Telefone: (71) 91234-5678</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
